@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { ViewType, UserState } from './types';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
@@ -291,6 +292,7 @@ export default function App() {
       )}
 
       <Footer setView={setView} selectedLanguage={selectedLanguage} />
+      <Analytics />
     </div>
   );
 }
